@@ -1,0 +1,10 @@
+Calm Pop is a simple stress relief game built around quick taps, soft motion, and slow breathing.
+
+Tap floating bubbles before they drift away, build a combo, and follow the breathing bar at the bottom of the screen. Each round is short and lightweight, making it easy to take a quick break.
+
+Features:
+- Relaxing bubble popping gameplay
+- Short timed rounds
+- Combo scoring
+- Gentle animated background
+- Breathing guide for a calmer pace

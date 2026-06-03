@@ -1,0 +1,33 @@
+opt_out_usage
+
+default_platform(:android)
+
+platform :android do
+  desc "Build the signed Android App Bundle"
+  lane :build_aab do
+    sh("cd .. && flutter build appbundle --release")
+  end
+
+  desc "Upload the current release build to Google Play internal testing"
+  lane :deploy_internal do
+    build_aab
+    upload_to_play_store(
+      track: "internal",
+      aab: "../build/app/outputs/bundle/release/app-release.aab",
+      json_key: "fastlane/play-store-service-account.json",
+      package_name: "com.khanhdangios.stressreliefgame",
+      release_status: "draft",
+      skip_upload_apk: true,
+      skip_upload_changelogs: false,
+      skip_upload_images: true,
+      skip_upload_screenshots: true
+    )
+  end
+
+  desc "Validate Google Play credentials and app access"
+  lane :validate_play_access do
+    validate_play_store_json_key(
+      json_key: "fastlane/play-store-service-account.json"
+    )
+  end
+end

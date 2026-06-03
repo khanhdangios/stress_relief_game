@@ -45,3 +45,12 @@ app.*.map.json
 # Android release signing secrets
 /android/key.properties
 /android/app/upload-keystore.jks
+
+# Google Play deployment secrets
+/android/fastlane/play-store-service-account.json
+/android/fastlane/.env
+/android/fastlane/report.xml
+
+# Ruby/Fastlane local install
+/.bundle/
+/vendor/bundle/
