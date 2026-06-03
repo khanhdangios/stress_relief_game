@@ -5,7 +5,7 @@ This project is configured to upload the signed Android App Bundle to Google Pla
 ## Prerequisites
 
 1. Create the app in Google Play Console with package name:
-   `com.khanhdangios.stressreliefgame`
+   `com.stressReliefGame`
 2. Create or link a Google Cloud service account for Play Console API access.
 3. Grant the service account access in Play Console.
 4. Download the service account JSON key and save it locally as:
