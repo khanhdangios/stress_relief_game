@@ -14,6 +14,7 @@ platform :android do
     upload_to_play_store(
       track: "internal",
       aab: "../build/app/outputs/bundle/release/app-release.aab",
+      mapping: "../build/app/outputs/mapping/release/mapping.txt",
       json_key: "fastlane/play-store-service-account.json",
       package_name: "com.stressReliefGame",
       release_status: "draft",
